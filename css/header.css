@@ -1,0 +1,67 @@
+header {
+  box-sizing: border-box;
+  padding-block: 20px;
+  height: 90px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+}
+/* 
+    Comentar o descomentar las soluciones para ver las diferencias
+*/
+
+/*  Solucion mas Simple al Hover del Header*/
+header nav ul li:hover {
+  cursor: pointer;
+  /* color: var(--verde-starbucks);
+  border-bottom: 5px solid var(--verde-starbucks); */
+} 
+/* Fin solucion simple */
+
+/*  Solucion mas linda y ordenada al Hover del Header*/
+header nav ul li:hover:after {
+  content: ""; /*  para que se vea el after, siempre hay que ponerle algo*/
+  display: block;
+  width: 100%; /*  para que ocupe todo el ancho del li*/
+  height: 5px;
+  background-color: var(--verde-starbucks);
+  position: absolute; /*  para que se posicione dentro del li*/
+  bottom: -16px; /*  para que se posicione debajo del li*/
+  left: 0;
+}
+/* Fin solucion Linda */
+
+
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+header nav img {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+header nav ul {
+  display: flex;
+
+  height: 100%;
+  width: 100%;
+  max-width: 1100px;
+}
+header nav ul li {
+  height: 50px;
+  line-height: 50px;
+  margin-right: 40px;
+  position: relative;
+}
+
+nav ul li a {
+  color: inherit; /*  hereda el color del padre*/
+  font-size: 0.875rem; /* 14px si rem por defecto vale 16px /// 16*0.875 = 14*/
+  font-weight: 900; /*  Depende de la fuente instalada*/
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.localization {
+  margin-left: auto;
+}
+/*  */
